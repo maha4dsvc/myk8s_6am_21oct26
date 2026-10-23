@@ -4,11 +4,13 @@ metadata:
   name: mysvc   
   labels:
     app: myapp
+    version: 2.6.1
 spec:
   selector:
-    app: myapp  
+    app: myapp
+    version: 2.6.1
   type: NodePort  
   ports:
   - protocol: TCP
-    port: 80
+    port: 8080
     nodePort: 30001
