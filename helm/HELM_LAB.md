@@ -193,7 +193,7 @@ helm uninstall booking-prod -n production
 helm history booking-prod -n production
 helm rollback booking-prod 1 -n production
 helm history booking-prod -n production
-kubectl get pods -n dev
+kubectl get pods -n production
 ```
 
 ### Inspecting a release
