@@ -188,6 +188,14 @@ helm uninstall booking-prod -n production
 
 ```
 
+
+```bash
+helm history booking-prod -n production
+helm rollback booking-prod 1 -n production
+helm history booking-prod -n production
+kubectl get pods -n dev
+```
+
 ### Inspecting a release
 ```bash
 helm status booking-prod
