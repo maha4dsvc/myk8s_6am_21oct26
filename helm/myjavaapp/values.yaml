@@ -1,7 +1,7 @@
 # Default values for the myjavaapp chart.
 # Override them per environment:  -f values-dev.yaml  /  -f values-prod.yaml  /  --set key=value
 
-replicaCount: 3
+replicaCount: 4
 
 image:
   repository: maha4iac/myonlinebooking
