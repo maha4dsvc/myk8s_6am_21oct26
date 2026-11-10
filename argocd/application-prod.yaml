@@ -12,7 +12,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/maha4dsvc/myK8s_8am_13oct26.git
+    repoURL: https://github.com/maha4dsvc/myk8s_6am_21oct26.git
     targetRevision: main
     path: helm/myjavaapp
     helm:
