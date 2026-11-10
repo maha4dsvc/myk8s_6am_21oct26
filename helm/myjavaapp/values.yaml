@@ -1,11 +1,11 @@
 # Default values for the myjavaapp chart.
 # Override them per environment:  -f values-dev.yaml  /  -f values-prod.yaml  /  --set key=value
 
-replicaCount: 2
+replicaCount: 4
 
 image:
   repository: maha4iac/myonlinebooking
-  tag: "1"
+  tag: "2"
   pullPolicy: IfNotPresent
 
 # Only needed for a private registry such as ECR, e.g.  - name: ecr-secret
