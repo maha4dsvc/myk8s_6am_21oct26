@@ -8,7 +8,7 @@
 # Built inside OpenShift (see OPENSHIFT_LAB.md):
 #   oc new-build https://github.com/maha4dsvc/myK8s_8am_13oct26.git --context-dir=openshift --strategy=docker --name=booking
 
-FROM docker.io/maha4iac/myonlinebooking:2
+FROM docker.io/maha4iac/myonlinebooking:1
 
 USER root
 RUN chgrp -R 0 /usr/local/tomcat && \
