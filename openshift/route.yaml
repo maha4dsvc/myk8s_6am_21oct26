@@ -1,0 +1,19 @@
+# OpenShift Route for the Service created by our Helm chart (lab step 7).
+# Same job as a LoadBalancer or NodePort on EKS, but shared by all apps and with HTTPS.
+#   oc apply -f openshift/route.yaml
+#   oc get route booking-helm          # HOST column = the URL
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: booking-helm
+  labels:
+    app: myjavaapp
+spec:
+  to:
+    kind: Service
+    name: booking-helm-myjavaapp      # <release>-<chart> from helm install booking-helm
+  port:
+    targetPort: 8080                  # the Service port
+  tls:
+    termination: edge                 # router serves HTTPS, talks HTTP to the pods
+    insecureEdgeTerminationPolicy: Redirect   # http:// redirects to https://
